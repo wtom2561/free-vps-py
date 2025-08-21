@@ -230,8 +230,8 @@ if [ "$MODE_CHOICE" = "1" ] || [ -z "$MODE_CHOICE" ]; then
     sed -i "s/UUID = os.environ.get('UUID', '[^']*')/UUID = os.environ.get('UUID', '$UUID_INPUT')/" app.py
     echo -e "${GREEN}UUID 已设置为: $UUID_INPUT${NC}"
     
-    sed -i "s/CFIP = os.environ.get('CFIP', '[^']*')/CFIP = os.environ.get('CFIP', 'm3u8home.top')/" app.py
-    echo -e "${GREEN}优选IP已自动设置为: m3u8home.top${NC}"
+    sed -i "s/CFIP = os.environ.get('CFIP', '[^']*')/CFIP = os.environ.get('CFIP', '')/" app.py
+    echo -e "${GREEN}优选IP已自动设置为: $CFIP${NC}"
     
 #    configure_hf_keep_alive
     
