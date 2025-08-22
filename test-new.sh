@@ -229,9 +229,9 @@ if [ "$MODE_CHOICE" = "1" ] || [ -z "$MODE_CHOICE" ]; then
     
     sed -i "s/UUID = os.environ.get('UUID', '[^']*')/UUID = os.environ.get('UUID', '$UUID_INPUT')/" app.py
     echo -e "${GREEN}UUID 已设置为: $UUID_INPUT${NC}"
-    
+
     # 不修改代码，直接设置环境变量
-    export CFIP="104.16.132.229"
+    export CFIP="joeyblog.net"
     if [ -n "$CFIP" ]; then
         sed -i "s/CFIP = os.environ.get('CFIP', '[^']*')/CFIP = os.environ.get('CFIP', '$CFIP')/" app.py
         echo -e "${GREEN}优选IP已设置为:$CFIP ${NC}"
